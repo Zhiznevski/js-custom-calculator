@@ -1,6 +1,6 @@
 export default class Command {
-  constructor(value) {
-    this.value = value;
+  constructor(valueToAdd) {
+    this.valueToAdd = valueToAdd;
   }
 
   execute() {

@@ -1,9 +1,9 @@
 export default class Calculator {
   constructor() {
-    this.value = '';
+    this.currentValue = '0';
   }
 
   executeCommand(command) {
-    this.value = command.execute(this.value);
+    this.currentValue = command.execute(this.currentValue).toString();
   }
 }
