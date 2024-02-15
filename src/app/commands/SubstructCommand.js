@@ -1,5 +1,5 @@
 import Command from '../command';
-import convertStringToNumber from '../digitsHandler';
+import convertStringToNumber from '../convertStringToNumber';
 
 export default class SubstructCommand extends Command {
   execute(state) {

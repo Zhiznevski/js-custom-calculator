@@ -5,6 +5,8 @@ import AddDigitCommand from './app/commands/AddDigitСommand';
 import SubstructCommand from './app/commands/SubstructCommand';
 import SetOperationCommand from './app/commands/SetOperationCommand';
 import ClearCommand from './app/commands/ClearCommand';
+import DivideCommand from './app/commands/DivideCommand';
+import MultiplyCommand from './app/commands/MultiplyCommand';
 
 const operations = document.querySelectorAll('[data-operation]');
 const digits = document.querySelectorAll('[data-number]');
@@ -18,7 +20,8 @@ const ACTIONS = {
   CLEAR: ClearCommand,
   ADD: AddCommand,
   SUBSTRUCT: SubstructCommand,
-
+  DIVIDE: DivideCommand,
+  MULTIPLY: MultiplyCommand,
 };
 
 operations.forEach((button) => {
