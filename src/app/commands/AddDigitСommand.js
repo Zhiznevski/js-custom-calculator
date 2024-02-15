@@ -3,14 +3,24 @@ import Command from '../command';
 export default class AddDigitCommand extends Command {
   execute(state) {
     const { currentValue } = state;
+    // if (state.operation && state.currentValue && state.prevValue) return state;
     if (currentValue.includes('.') && this.valueToAdd === '.') {
-      return currentValue;
+      return {
+        ...state,
+        currentValue,
+      };
     }
     if (currentValue[0] === '0' && currentValue[1] !== '.' && this.valueToAdd === '0') {
-      return currentValue;
+      return {
+        ...state,
+        currentValue,
+      };
     }
     if (currentValue === '0' && this.valueToAdd !== '.') {
-      return this.valueToAdd;
+      return {
+        ...state,
+        currentValue,
+      };
     }
     return {
       ...state,

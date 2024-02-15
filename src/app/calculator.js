@@ -14,6 +14,7 @@ export default class Calculator {
   }
 
   updateDisplay() {
-    this.state.input.innerText = this.state.currentValue;
+    if (this.state.currentValue) this.state.input.innerText = this.state.currentValue;
+    else this.state.input.innerText = this.state.prevValue;
   }
 }
