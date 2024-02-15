@@ -1,17 +1,19 @@
 export default class Calculator {
   constructor(input) {
-    this.currentValue = '';
-    this.prevValue = '';
-    this.input = input;
+    this.state = {
+      currentValue: '',
+      prevValue: '',
+      operation: null,
+      input,
+    };
   }
 
   executeCommand(command) {
-    this.currentValue = command.execute(this.currentValue).toString();
+    this.state = command.execute(this.state);
+    this.updateDisplay();
   }
 
-  setOperation() {}
-
   updateDisplay() {
-    this.input.innerText = this.currentValue;
+    this.state.input.innerText = this.state.currentValue;
   }
 }
