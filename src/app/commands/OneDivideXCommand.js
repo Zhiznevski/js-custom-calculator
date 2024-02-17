@@ -1,8 +1,8 @@
 import Command from '../command';
 
-export default class PercentCommand extends Command {
+export default class OneDivideXCommand extends Command {
   execute(state) {
-    const newValue = parseFloat(state.currentValue) / 100;
+    const newValue = 1 / parseFloat(state.currentValue);
     if (Number.isNaN(newValue)) return state;
     return {
       ...state,

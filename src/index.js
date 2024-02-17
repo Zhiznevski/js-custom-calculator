@@ -41,6 +41,7 @@ clear.addEventListener('click', () => {
 
 equals.addEventListener('click', () => {
   if (ActionsWithTwoOperands[calculator.state.operation]) {
+    console.log('hello');
     calculator.executeCommand(new ActionsWithTwoOperands[calculator.state.operation]());
   }
   console.log(calculator.state);

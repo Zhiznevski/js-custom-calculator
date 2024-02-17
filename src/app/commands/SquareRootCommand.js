@@ -1,8 +1,8 @@
 import Command from '../command';
 
-export default class PercentCommand extends Command {
+export default class SquareRootCommand extends Command {
   execute(state) {
-    const newValue = parseFloat(state.currentValue) / 100;
+    const newValue = parseFloat(Math.sqrt(state.currentValue));
     if (Number.isNaN(newValue)) return state;
     return {
       ...state,

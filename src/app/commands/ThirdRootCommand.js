@@ -1,8 +1,8 @@
 import Command from '../command';
 
-export default class PercentCommand extends Command {
+export default class ThirdRootCommand extends Command {
   execute(state) {
-    const newValue = parseFloat(state.currentValue) / 100;
+    const newValue = parseFloat(Math.cbrt(state.currentValue));
     if (Number.isNaN(newValue)) return state;
     return {
       ...state,
