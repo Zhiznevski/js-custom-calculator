@@ -5,6 +5,7 @@ export default class Calculator {
       prevValue: '',
       operation: null,
       input,
+      memory: '',
     };
   }
 
@@ -16,5 +17,33 @@ export default class Calculator {
   updateDisplay() {
     if (this.state.currentValue) this.state.input.innerText = this.state.currentValue;
     else this.state.input.innerText = this.state.prevValue;
+  }
+
+  clearMemory() {
+    this.state = {
+      ...this.state,
+      memory: '',
+    };
+  }
+
+  addToMemory() {
+    this.state = {
+      ...this.state,
+      memory: this.state.memory + this.state.currentValue,
+    };
+  }
+
+  deleteFromMemory() {
+    this.state = {
+      ...this.state,
+      memory: this.state.memory - this.state.currentValue,
+    };
+  }
+
+  showMemory() {
+    this.state = {
+      ...this.state,
+      currentValue: this.state.memory,
+    };
   }
 }
