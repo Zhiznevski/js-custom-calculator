@@ -10,9 +10,10 @@
         <title>js-custom-calculator</title>
     </head>
     <body>
-        <div class="calculator-grid">
+        <div class="calculator">
             <div class="output">
-              <div data-display class="current-operand"></div>
+              <div class="theme-button"></div>
+              <div data-display class="operand"></div>
             </div>
             <button data-memory='MEMORYCLEAR'>mc</button>
             <button data-memory="MEMORYADD">m+</button>
@@ -42,7 +43,8 @@
             <button data-number>2</button>
             <button data-number>3</button>
             <button data-operation='ADD' class="blue">+</button>
-            <button data-number disabled class="span-two disabled"></button>
+            <button data-number disabled class="span-two disabled">
+            </button>
             <button data-operand='FACTORIAL'>x!</button>
             <button data-number class="span-two">0</button>
             <button data-number>.</button>
