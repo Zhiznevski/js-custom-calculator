@@ -13,6 +13,10 @@ import ThirdRootCommand from '../commands/ThirdRootCommand';
 import FactorialCommand from '../commands/FactorialCommand';
 import XPowerYCommand from '../commands/XPowerYCommand';
 import XRootYCommand from '../commands/XRootYCommand';
+import MemoryAddCommand from '../commands/MemoryAddCommand';
+import MemorySubstructCommand from '../commands/MemorySubstructCommand';
+import MemoryClearCommand from '../commands/MemoryClearCommand';
+import MemoryRecallCommand from '../commands/MemoryRecallCommand';
 
 export const ActionsWithTwoOperands = {
   ADD: AddCommand,
@@ -33,4 +37,11 @@ export const ActionsWithOneOperand = {
   SQUAREROOT: SquareRootCommand,
   THIRDROOT: ThirdRootCommand,
   FACTORIAL: FactorialCommand,
+};
+
+export const ActionsWithMemory = {
+  MEMORYADD: MemoryAddCommand,
+  MEMORYSUBSTRUCT: MemorySubstructCommand,
+  MEMORYCLEAR: MemoryClearCommand,
+  MEMORYRECALL: MemoryRecallCommand,
 };

@@ -1,5 +1,5 @@
 import Command from '../command';
-import convertStringToNumber from '../convertStringToNumber';
+import convertStringToNumber from '../utils/convertStringToNumber';
 
 export default class XRootYCommand extends Command {
   execute(state) {

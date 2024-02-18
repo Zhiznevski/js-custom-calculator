@@ -1,12 +1,12 @@
 export default class Calculator {
-  constructor(input) {
+  constructor(display) {
     this.state = {
       currentValue: '',
       prevValue: '',
       operation: null,
-      input,
       memory: '',
     };
+    this.display = display;
   }
 
   executeCommand(command) {
@@ -15,35 +15,7 @@ export default class Calculator {
   }
 
   updateDisplay() {
-    if (this.state.currentValue) this.state.input.innerText = this.state.currentValue;
-    else this.state.input.innerText = this.state.prevValue;
-  }
-
-  clearMemory() {
-    this.state = {
-      ...this.state,
-      memory: '',
-    };
-  }
-
-  addToMemory() {
-    this.state = {
-      ...this.state,
-      memory: this.state.memory + this.state.currentValue,
-    };
-  }
-
-  deleteFromMemory() {
-    this.state = {
-      ...this.state,
-      memory: this.state.memory - this.state.currentValue,
-    };
-  }
-
-  showMemory() {
-    this.state = {
-      ...this.state,
-      currentValue: this.state.memory,
-    };
+    if (this.state.currentValue) this.display.innerText = this.state.currentValue;
+    else this.display.innerText = this.state.prevValue;
   }
 }
