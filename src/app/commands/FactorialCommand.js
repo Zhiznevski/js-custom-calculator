@@ -10,7 +10,7 @@ export default class FactorialCommand extends Command {
         currentValue: ERROR_MESSAGE,
       };
     }
-    const calculateFactorial = (value) => (value ? value * calculateFactorial(value - 1) : 1); // >150 ----> Ошибка
+    const calculateFactorial = (value) => (value ? value * calculateFactorial(value - 1) : 1);
     const res = calculateFactorial(newValue);
     if (Number.isNaN(res)) return state;
     return {
