@@ -1,5 +1,5 @@
 {
-    "plugins": ["prettier", "import"],
+    "plugins": ["prettier", "import", "jest"],
     "extends": ["airbnb-base", "plugin:prettier/recommended"],
     "parserOptions": {
         "ecmaVersion": 2022,
@@ -8,7 +8,8 @@
     "env": {
         "es6": true,
         "browser": true,
-        "node": true
+        "node": true,
+        "jest/globals": true
     },
     "rules": {
         "no-debugger": "off",
