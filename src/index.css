@@ -1,0 +1,143 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  color: #B5B5B5;
+  background-color: #191919;
+  outline: none;
+  font-size: 1.12rem;
+  transition: .1s;
+}
+ button:hover:not(.disabled) {
+  background-color: #222222;
+  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-size: 16px;
+  background-image: url('./assets/samuel-scalzo-xyuYk9oLA8I-unsplash.jpg');
+  background-size: cover;
+}
+  .calculator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(7, 120px);
+    grid-template-rows:  repeat(6, 60px);
+  }
+
+  .span-two {
+    grid-column: span 2;
+  }
+  
+  .output {
+    position: relative;
+    grid-column: 1 / -1;
+    background-color: #191919;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    color: white;
+    font-size: 2rem; 
+    transition: .1s;
+  }
+
+  .output-light-mode {
+    color: #000000;
+    background-color: #F1F2F3;
+  }
+
+  sup {
+    font-size: 1rem;
+  }
+  
+  .blue {
+    color: #466DD8;
+  }
+  
+  [data-number] {
+    color: #fff;
+  }
+
+  .disabled {
+    cursor:default;
+  }
+
+  .theme-button {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-image: url("./assets/modeDark.svg");
+}
+  .theme-button-light-mode {
+    background-image: url("./assets/modeLight.svg");
+}
+
+.button-light-mode {
+    color: #000000;
+    background-color: #F1F2F3;
+}
+
+.button-light-mode:hover:not(.disabled) {
+  background-color: #e9eaeb;
+  
+}
+
+@media (max-width: 850px) {
+  .calculator {
+    grid-template-columns: repeat(7, 100px);
+    grid-template-rows:  repeat(6, 40px);
+  }
+}
+
+@media (max-width: 700px) {
+  .output {
+    padding: 5px;
+    font-size: 1.5rem; 
+    
+  }
+  .calculator {
+    grid-template-columns: repeat(7, 70px);
+    grid-template-rows:  repeat(6, 30px);
+  }
+  button {
+    font-size: 0.95rem;
+  }
+  sup {
+    font-size: 0.7rem;
+}
+}
+
+@media (max-width: 500px) {
+ .calculator {
+    grid-template-columns: repeat(7, 55px);
+    grid-template-rows:  repeat(6, 30px);
+  }
+}
